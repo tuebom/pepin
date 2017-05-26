@@ -21,6 +21,7 @@
   <preference name="android-build-tool" value="gradle" /> 
   
 
+	<gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <!--<gap:plugin name="cordova-plugin-battery-status"/>
   <gap:plugin name="cordova-plugin-camera"/>
   <gap:plugin name="cordova-plugin-media-capture"/>
