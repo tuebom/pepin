@@ -37,8 +37,8 @@ img.responsive-card {
 }
 
 img.responsive {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 150px;
 }
 
 a {
