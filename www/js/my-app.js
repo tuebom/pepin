@@ -152,12 +152,12 @@ myApp.onPageInit('settings', function (page) {
 
 $$('input').on('focus', function () {
 // $$(window).on('resize', function () {
-  windowcurrentHeight = $$(window).height();
-  myApp.alert(windowcurrentHeight, 'Window Height On Resize');
-  if (windowcurrentHeight < windowHeight) {
-    windowheightDiff = windowHeight - windowcurrentHeight;
-    $$('.kb').css('height', windowheightDiff + 'px');
-  }
+  //windowcurrentHeight = $$(window).height();
+  //myApp.alert(windowcurrentHeight, 'Window Height On Resize');
+  //if (windowcurrentHeight < windowHeight) {
+    //windowheightDiff = windowHeight - windowcurrentHeight;
+    $$('.kb').css('height', '224px');
+  //}
 });
 
 $$('input').on('blur', function () {
