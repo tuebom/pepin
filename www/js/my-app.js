@@ -150,7 +150,7 @@ $$('.ac-1').on('click', function () {
     
 myApp.onPageInit('settings', function (page) {
 
-$$(input).on('focus', function () {
+$$('input').on('focus', function () {
 // $$(window).on('resize', function () {
   windowcurrentHeight = $$(window).height();
   myApp.alert(windowcurrentHeight, 'Window Height On Resize');
@@ -160,7 +160,7 @@ $$(input).on('focus', function () {
   }
 });
 
-$$(input).on('blur', function () {
+$$('input').on('blur', function () {
   $$('.kb').css('height', '0px');
 });
 });
