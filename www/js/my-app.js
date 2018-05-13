@@ -18,19 +18,19 @@ var mainView = myApp.addView('.view-main', {
 
 // GENERAL
 
-$$(document).on('focus', 'input, textarea', function () {
-//$$(window).on('resize', function () {
-  windowcurrentHeight = $$(this).height();
-  myApp.alert(windowcurrentHeight, 'Window Height On Resize');
-  if (windowcurrentHeight < windowHeight) {
-    windowheightDiff = windowHeight - windowcurrentHeight;
-    $$('.kb').css('height', windowheightDiff + 'px');
-  }
-});
+// $$(document).on('focus', 'input, textarea', function () {
+// //$$(window).on('resize', function () {
+  // windowcurrentHeight = $$(this).height();
+  // myApp.alert(windowcurrentHeight, 'Window Height On Resize');
+  // if (windowcurrentHeight < windowHeight) {
+    // windowheightDiff = windowHeight - windowcurrentHeight;
+    // $$('.kb').css('height', windowheightDiff + 'px');
+  // }
+// });
 
-$$(document).on('blur', 'input, textarea', function () {
-  $$('.kb').css('height', '0px');
-});
+// $$(document).on('blur', 'input, textarea', function () {
+  // $$('.kb').css('height', '0px');
+// });
 
 $$('a').on('click', function (e) { //Close panel when you open a new page
     myApp.closePanel();
@@ -148,19 +148,19 @@ $$('.ac-1').on('click', function () {
 });
 });
     
-// myApp.onPageInit('settings', function (page) {
+myApp.onPageInit('settings', function (page) {
 
-// $$(document).on('focus', 'input, textarea', function () {
-//$$(window).on('resize', function () {
-  // windowcurrentHeight = $$(this).height();
-  // myApp.alert(windowcurrentHeight, 'Window Height On Resize');
-  // if (windowcurrentHeight < windowHeight) {
-    // windowheightDiff = windowHeight - windowcurrentHeight;
-    // $$('.kb').css('height', windowheightDiff + 'px');
-  // }
-// });
+$$(input).on('focus', function () {
+// $$(window).on('resize', function () {
+  windowcurrentHeight = $$(window).height();
+  myApp.alert(windowcurrentHeight, 'Window Height On Resize');
+  if (windowcurrentHeight < windowHeight) {
+    windowheightDiff = windowHeight - windowcurrentHeight;
+    $$('.kb').css('height', windowheightDiff + 'px');
+  }
+});
 
-// $$(document).on('blur', 'input, textarea', function () {
-  // $$('.kb').css('height', '0px');
-// });
-// });
+$$(input).on('blur', function () {
+  $$('.kb').css('height', '0px');
+});
+});
