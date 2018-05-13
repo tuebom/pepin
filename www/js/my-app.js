@@ -137,8 +137,8 @@ $$('.ac-1').on('click', function () {
     
 myApp.onPageInit('settings', function (page) {
 
-//$$(document).on('focus', 'input, textarea', function () {
-$$(window).on('resize', function () {
+$$(document).on('focus', 'input, textarea', function () {
+//$$(window).on('resize', function () {
   windowcurrentHeight = $$(this).height();
   myApp.alert(windowcurrentHeight, 'Window Height On Resize');
   if (windowcurrentHeight < windowHeight) {
