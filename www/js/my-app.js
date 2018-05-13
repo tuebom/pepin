@@ -135,3 +135,18 @@ $$('.ac-1').on('click', function () {
 });
 });
     
+myApp.onPageInit('settings', function (page) {
+
+//$$(document).on('focus', 'input, textarea', function () {
+$$(window).on('resize', function () {
+  windowcurrentHeight = $$(this).height();
+  if (windowcurrentHeight < windowHeight) {
+    windowheightDiff = windowHeight - windowcurrentHeight;
+    $$('.kb').css('height', windowheightDiff + 'px');
+  }
+});
+
+$$(document).on('blur', 'input, textarea', function () {
+  $$('.kb').css('height', '0px');
+});
+});

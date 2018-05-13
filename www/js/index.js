@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+ 
+var windowHeight, windowcurrentHeight, windowheightDiff;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -27,13 +30,30 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener('backbutton', this.onBackButton, false);
     },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        windowHeight = $$(window).height();
+        
         app.receivedEvent('deviceready');
+    },
+    onBackButton: function(e) {
+      var page = myApp.getCurrentView().activePage;
+      
+      //myApp.hidePreloader();
+      e.preventDefault();
+      if(page.name=="index") {
+        navigator.app.clearHistory();
+        navigator.app.exitApp();
+      } else {
+      //if (history.length > 0)
+        mainView.router.back();
+        //Admob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+      }
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
