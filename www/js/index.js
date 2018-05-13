@@ -38,6 +38,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         windowHeight = $$(window).height();
+        myApp.alert(windowHeight, 'Window Height');
         
         app.receivedEvent('deviceready');
     },
