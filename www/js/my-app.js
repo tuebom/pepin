@@ -156,7 +156,7 @@ $$('input').on('focus', function () {
   //myApp.alert(windowcurrentHeight, 'Window Height On Resize');
   //if (windowcurrentHeight < windowHeight) {
     //windowheightDiff = windowHeight - windowcurrentHeight;
-    $$('.kb').css('height', '224px');
+    $$('.kb').css('height', '280px');
   //}
 });
 
