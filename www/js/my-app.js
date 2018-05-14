@@ -153,8 +153,10 @@ myApp.onPageInit('settings', function (page) {
 $$('input').on('focus', function () {
 // $$(window).on('resize', function () {
   //windowcurrentHeight = $$(window).height();
-  //myApp.alert(windowcurrentHeight, 'Window Height On Resize');
   var limit = $$(window).height() - 280;
+  myApp.alert(limit, 'Limit');
+  myApp.alert('$$(this).top: '+$$(this).top, 'Top');
+
   if ($$(this).top > limit) {
     //windowheightDiff = windowHeight - windowcurrentHeight;
     $$('.kb').css('height', '280px');
