@@ -151,17 +151,12 @@ $$('.ac-1').on('click', function () {
 myApp.onPageInit('settings', function (page) {
 
 $$('input').on('focus', function () {
-// $$(window).on('resize', function () {
-  //windowcurrentHeight = $$(window).height();
-  var limit = $$(window).height() - 280;
-  //myApp.alert(limit, 'Limit');
-  //myApp.alert('$$(this).top: '+$$(this).style.top, 'Top');
+  $$('.kb').css('height', '280px');
+  //var limit = $$(window).height() - 280;
 
-  if ($$(this).style.top > limit) {
-    //windowheightDiff = windowHeight - windowcurrentHeight;
-    $$('.kb').css('height', '280px');
-    $$('.page-content').scrollTop($$(this).style.top - limit);
-  }
+  //if ($$(this).offset().top > limit) {
+    $$('.page-content').scrollTop($$(this).offset().top);
+  //}
 });
 
 $$('input').on('blur', function () {
