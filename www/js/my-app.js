@@ -154,8 +154,8 @@ $$('input').on('focus', function () {
 // $$(window).on('resize', function () {
   //windowcurrentHeight = $$(window).height();
   var limit = $$(window).height() - 280;
-  myApp.alert(limit, 'Limit');
-  myApp.alert('$$(this).top: '+$$(this).style.top, 'Top');
+  //myApp.alert(limit, 'Limit');
+  //myApp.alert('$$(this).top: '+$$(this).style.top, 'Top');
 
   if ($$(this).style.top > limit) {
     //windowheightDiff = windowHeight - windowcurrentHeight;
