@@ -155,12 +155,12 @@ $$('input').on('focus', function () {
   //windowcurrentHeight = $$(window).height();
   var limit = $$(window).height() - 280;
   myApp.alert(limit, 'Limit');
-  myApp.alert('$$(this).top: '+$$(this).top, 'Top');
+  myApp.alert('$$(this).top: '+$$(this).style.top, 'Top');
 
-  if ($$(this).top > limit) {
+  if ($$(this).style.top > limit) {
     //windowheightDiff = windowHeight - windowcurrentHeight;
     $$('.kb').css('height', '280px');
-    $$('.page-content').scrollTop($$(this).top > limit);
+    $$('.page-content').scrollTop($$(this).style.top - limit);
   }
 });
 
