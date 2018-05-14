@@ -155,7 +155,7 @@ $$('input').on('focus', function () {
   //var limit = $$(window).height() - 280;
 
   //if ($$(this).offset().top > limit) {
-    $$('.page-content').scrollTop($$(this).offset().top);
+    $$('.page-content').scrollTop($$(this).offset().top-56);
   //}
 });
 
