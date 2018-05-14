@@ -155,10 +155,11 @@ $$('input').on('focus', function () {
   //windowcurrentHeight = $$(window).height();
   //myApp.alert(windowcurrentHeight, 'Window Height On Resize');
   var limit = $$(window).height() - 280;
-  //if (windowcurrentHeight < windowHeight) {
+  if ($$(this).top > limit) {
     //windowheightDiff = windowHeight - windowcurrentHeight;
     $$('.kb').css('height', '280px');
-  //}
+    $$('.page-content').scrollTop($$(this).top > limit);
+  }
 });
 
 $$('input').on('blur', function () {
